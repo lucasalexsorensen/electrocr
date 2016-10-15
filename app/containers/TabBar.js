@@ -20,18 +20,17 @@ class TabBar extends Component {
         boxShadow: 'none',
         overflowX: 'hidden',
         zIndex: '20',
-        width: '728',
+        width: '100%',
         position: 'absolute',
         bottom: 0,
         left: 0,
       },
     };
 
-
     return (
       <Tabs
         value={this.props.routing.locationBeforeTransitions.pathname}
-        onChange={(value) => {this.props.push(value)}}
+        onChange={(value) => {this.props.routerPush(value)}}
         style={styles.tabBar}
       >
         <Tab
@@ -42,7 +41,7 @@ class TabBar extends Component {
         <Tab
           value="/scan"
           icon={<ActionFindInPage />}
-          label="SCAN"
+          label="SCANNING"
         />
         <Tab
           value="/settings"
@@ -63,7 +62,7 @@ function mapStateToProps(state){
 
 function mapDispatchToProps(dispatch) {
   return bindActionCreators({
-    push: push
+    routerPush: push
   }, dispatch)
 }
 

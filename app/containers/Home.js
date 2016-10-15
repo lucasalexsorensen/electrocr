@@ -5,10 +5,15 @@ import { Link } from 'react-router'
 
 export default class Home extends Component {
   render() {
+    var styles = {
+      page: {
+        textAlign: 'center'
+      }
+    }
+
     return (
-      <div>
+      <div style={styles.page}>
         <h1>home</h1>
-        <Link to="/scan">go to scan</Link>
       </div>
     );
   }

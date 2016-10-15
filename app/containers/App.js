@@ -2,7 +2,7 @@
 import React, { Component, PropTypes } from 'react';
 
 import Header from '../components/Header'
-import LeftNav from '../components/LeftNav'
+import FileUploadDialog from '../containers/FileUploadDialog'
 import TabBar from '../containers/TabBar'
 
 export default class App extends Component {
@@ -18,6 +18,7 @@ export default class App extends Component {
         </header>
 
         <main>
+          <FileUploadDialog />
           {this.props.children}
         </main>
 
