@@ -31,7 +31,7 @@ render(
     <MuiThemeProvider>
       <Router history={history}>
         <Route component={App}>
-          <IndexRedirect to="/" />
+          <IndexRedirect to="/scan" />
           <Route path="/">
             <IndexRoute component={Home} />
           </Route>

@@ -10,6 +10,8 @@ import FileUpload from 'material-ui/svg-icons/file/file-upload';
 
 import { openFileUploadDialog } from '../actions/dialogs';
 
+import Dropzone from './Dropzone';
+
 class Scan extends Component {
   render() {
     var styles={
@@ -20,7 +22,18 @@ class Scan extends Component {
 
       button: {
         margin: 12
-      }
+      },
+
+      imageInput: {
+        cursor: 'pointer',
+        position: 'absolute',
+        top: 0,
+        bottom: 0,
+        right: 0,
+        left: 0,
+        width: '100%',
+        opacity: 0,
+      },
     };
 
     return (
@@ -28,12 +41,14 @@ class Scan extends Component {
         <h4 style={{ textAlign: 'center', fontWeight: 700, fontSize: 24 }}>Scanning</h4>
 
         <RaisedButton
-          onClick={() => this.props.openFileUploadDialog()}
+          //onClick={() => this.props.openFileUploadDialog()}
           label="file"
           icon={<FileUpload />}
           primary={true}
           style={styles.button}
-        />
+        >
+          <input type="file" style={styles.imageInput} />
+        </RaisedButton>
         <br/>
         <RaisedButton
           label="screencap"
@@ -41,6 +56,13 @@ class Scan extends Component {
           primary={true}
           style={styles.button}
         />
+
+        <br/><br/>
+
+        <div style={{borderRadius: 20, marginRight: 'auto', marginLeft: 'auto', display: 'block', width: '80%', height: '300px', border: '2px dotted grey'}}>
+          <Dropzone />
+        </div>
+
       </div>
     );
   }
