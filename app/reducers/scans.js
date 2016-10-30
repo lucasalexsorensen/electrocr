@@ -11,7 +11,8 @@ let scans = (state = initialState, action) => {
     case SCAN_FILE_START:
       return Object.assign({}, state, {
         file: action.file,
-        progress: 0.0
+        progress: 0.0,
+        result: {}
       });
     case SCAN_FILE_PROGRESS:
       if (action.result.status == "recognizing text"){

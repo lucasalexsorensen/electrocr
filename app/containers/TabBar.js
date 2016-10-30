@@ -35,11 +35,6 @@ class TabBar extends Component {
       >
         <Tab
           value="/"
-          icon={<ActionHome />}
-          label="HOME"
-        />
-        <Tab
-          value="/scan"
           icon={<ActionFindInPage />}
           label="SCANNING"
         />

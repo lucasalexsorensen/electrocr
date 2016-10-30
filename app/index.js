@@ -20,10 +20,8 @@ injectTapEventPlugin();
 
 // containers:
 import App from './containers/App'
-import Home from './containers/Home'
 import Scan from './containers/Scan'
 import Settings from './containers/Settings'
-
 
 
 render(
@@ -31,11 +29,8 @@ render(
     <MuiThemeProvider>
       <Router history={history}>
         <Route component={App}>
-          <IndexRedirect to="/scan" />
+          <IndexRedirect to="/" />
           <Route path="/">
-            <IndexRoute component={Home} />
-          </Route>
-          <Route path="/scan">
             <IndexRoute component={Scan} />
           </Route>
           <Route path="/settings">

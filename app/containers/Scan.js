@@ -38,18 +38,6 @@ class Scan extends Component {
 
     return (
       <div style={styles.page}>
-        <h4 style={{ textAlign: 'center', fontWeight: 700, fontSize: 24 }}>Scanning</h4>
-
-        <RaisedButton
-          //onClick={() => this.props.openFileUploadDialog()}
-          label="file"
-          icon={<FileUpload />}
-          primary={true}
-          style={styles.button}
-        >
-          <input type="file" style={styles.imageInput} />
-        </RaisedButton>
-        <br/>
         <RaisedButton
           label="screencap"
           icon={<ActionFlipToBack />}
@@ -68,10 +56,4 @@ class Scan extends Component {
   }
 }
 
-function mapDispatchToProps(dispatch){
-  return bindActionCreators({
-    openFileUploadDialog
-  }, dispatch)
-}
-
-export default connect(null, mapDispatchToProps)(Scan)
+export default Scan;

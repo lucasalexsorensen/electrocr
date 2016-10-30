@@ -14,7 +14,7 @@ class Dropzone extends Component {
         onDrop={(files) => this.props.startScanFile(files[0].path)}
         style={{marginLeft: 'auto', marginRight: 'auto', height: '100%', width: 'auto', lineHeight: '280px'}}
       >
-        <div>or drop files here</div>
+        <div>click to upload or drop files here</div>
       </ReactDropzone>
     )
   }
