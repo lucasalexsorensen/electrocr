@@ -2,6 +2,7 @@
 import React, { Component, PropTypes } from 'react';
 
 import Header from '../components/Header'
+import ScannerDialog from '../containers/ScannerDialog'
 import FileUploadDialog from '../containers/FileUploadDialog'
 import TabBar from '../containers/TabBar'
 
@@ -18,6 +19,7 @@ export default class App extends Component {
         </header>
 
         <main>
+          <ScannerDialog />
           <FileUploadDialog />
           {this.props.children}
         </main>
